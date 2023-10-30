@@ -61,4 +61,8 @@ else
 SOURCES_C         += $(LIBRETRO_COMMON)/streams/memory_stream.c
 endif
 
+ifneq (,$(findstring sf2000,$(platform)))
+SOURCES_C         += $(LIBRETRO_COMMON)/streams/memory_stream.c
+endif
+
 SOURCES_C         += $(SOURCE_DIR)/ports/libretro/smsplus_libretro.c
